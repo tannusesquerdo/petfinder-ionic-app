@@ -24524,10 +24524,6 @@ page-modal-sponsor-pet p {
   background: rgba(0, 0, 0, 0.4);
 }
 
-.ios page-pet-details .pet-photos-slider .thumb-img, .md page-pet-details .pet-photos-slider .thumb-img {
-  padding: 10px;
-}
-
 .ios page-pet-details .pet .swiper-pagination-bullet-active, .md page-pet-details .pet .swiper-pagination-bullet-active {
   background: #6504B5;
 }
@@ -24697,6 +24693,9 @@ page-modal-sponsor-pet p {
   font-weight: 700;
   margin: 0;
   margin-top: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .ios page-pets-list .pet .infos-container .rescue-info, .md page-pets-list .pet .infos-container .rescue-info {

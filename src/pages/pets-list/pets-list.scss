@@ -87,6 +87,9 @@
           font-weight: 700;
           margin: 0;
           margin-top: 3px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
         }
 
         .rescue-info {
