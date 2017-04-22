@@ -17,10 +17,10 @@ export class Petfinder {
     let location = city ? city : 'Canada';
     let method = 'pet.find';
     this.url_mount = this.URL+method+'?key='+this.KEY+'&location='+location+'&animal='+animal+'&format=json';
-    let url_local = '../assets/data/pets.json';
+    let url_local = `./assets/data/pets_${petType}.json`;
 
     return new Promise((resolve, reject) => {
-      this.http.get(this.url_mount)
+      this.http.get(url_local)
       .map(res => res.json())
       .subscribe(data => {
         this.offset = data.petfinder.lastOffset.$t;
