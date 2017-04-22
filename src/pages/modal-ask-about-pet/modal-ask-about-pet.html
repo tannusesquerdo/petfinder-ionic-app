@@ -1,0 +1,64 @@
+<ion-header no-border>
+  <ion-toolbar color="primary">
+    <ion-title>
+      SEND AN INQUIRY
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text showWhen="ios">Cancel</span>
+        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <h1>INQUIRE AS A GUEST</h1>
+  <form #askForm="ngForm" novalidate>
+    <ion-list no-lines>
+      <ion-item>
+        <ion-label stacked color="primary">First Name</ion-label>
+        <ion-input [(ngModel)]="profile.firstname" name="firstname" type="text" #firstname="ngModel" required>
+        </ion-input>
+      </ion-item>
+      <p ion-text [hidden]="firstname.valid || submitted == false" color="danger" padding-left>
+        Firts Name is required
+      </p>
+
+      <ion-item>
+        <ion-label stacked color="primary">Last Name</ion-label>
+        <ion-input [(ngModel)]="profile.lastname" name="lastname" type="text" #lastname="ngModel" required>
+        </ion-input>
+      </ion-item>
+      <p ion-text [hidden]="lastname.valid || submitted == false" color="danger" padding-left>
+        Last Name is required
+      </p>
+
+      <ion-item>
+        <ion-label stacked color="primary">Phone Number (Optional)</ion-label>
+        <ion-input [(ngModel)]="profile.phone" name="phone" type="number" #phone="ngModel">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked color="primary">Email</ion-label>
+        <ion-input [(ngModel)]="profile.email" name="email" type="email" #email="ngModel" required>
+        </ion-input>
+      </ion-item>
+      <p ion-text [hidden]="email.valid || submitted == false" color="danger" padding-left>
+        Email is required
+      </p>
+
+      <ion-item>
+        <ion-label stacked color="primary">Your Message (5000 Character Limit)</ion-label>
+        <ion-input [(ngModel)]="profile.comments" name="comments" type="textarea" #email="ngModel">
+        </ion-input>
+      </ion-item>
+    </ion-list>
+
+    <div padding>
+      <button ion-button color="secondary" (click)="onAsk(askForm)" type="submit" block>Send Message</button>
+    </div>
+  </form>
+</ion-content>

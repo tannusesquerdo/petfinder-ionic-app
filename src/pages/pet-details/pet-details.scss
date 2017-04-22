@@ -1,0 +1,145 @@
+.ios, .md {
+  page-pet-details {
+    font-family: 'Montserrat', sans-serif;
+
+    .content {
+      background-color: #FFFFFF;
+    }
+
+    svg {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 99;
+    }
+
+    .scroll-content {
+      z-index: 10;
+      background: url('../assets/images/circle-top.svg') no-repeat;
+      background-position: top center;
+      background-size: 101%;
+    }
+
+    svg#menu-bg {
+      position: absolute;
+      top: 0;
+    }
+
+    .circle-top {
+      margin-top: -1px;
+      width: 100%;
+      position: absolute;
+    }
+
+    .pet {
+      &-photos-slider {
+        background: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16);
+        margin-bottom: 16px;
+        overflow: hidden;
+
+        .pet-images {
+          max-width: 100%;
+          height: 45vh;
+          overflow: hidden;
+          margin: 0 auto;
+          padding: 10px !important;
+        }
+
+        .btn-expand {
+          position: absolute;
+          right: 0;
+          background: rgba(0, 0, 0, 0.4)
+        }
+
+        .thumb-img {
+          padding: 10px;
+        }
+      }
+
+      .swiper-pagination-bullet-active {
+        background: #6504B5;
+      }
+
+      .infos-container {
+        position: relative;
+
+        .pet-name {
+          font-size: 1.4em;
+          line-height: 1.4em;
+          color: color($colors, primary);
+          font-weight: 700;
+          margin: 0;
+          overflow: hidden;
+          text-transform: uppercase;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .pet-breed {
+          font-size: 1.2em;
+          line-height: 1.5em;
+          color: #999999;
+          margin: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .pet-specs {
+          color: #999999;
+          font-size: 1.2em;
+          line-height: 1.5em;
+          font-weight: 700;
+          margin: 0;
+        }
+
+        .rescue-info {
+          color: #999999;
+          font-size: 1.2em;
+          margin-top: 5px;
+
+          span {
+            margin-top: 3px;
+          }
+
+          a {
+            color: #7332D6;
+            text-decoration: none;
+          }
+        }
+      }
+
+      .infos-about {
+        margin-top: 2em;
+
+        .pet-about {
+          font-size: 1.4em;
+          line-height: 1.4em;
+          color: color($colors, primary);
+          font-weight: 700;
+          margin: 0;
+        }
+
+        .pet-description {
+          color: #999999;
+          font-size: 1.1em;
+          line-height: 1.4em;
+          font-weight: normal;
+        }
+      }
+    }
+
+    ion-footer {
+      background-color: #EFEEF1;
+      padding: .64em 0;
+
+      ion-buttons {
+        text-align: center;
+      }
+    }
+  }
+}

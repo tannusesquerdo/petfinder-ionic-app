@@ -1,0 +1,61 @@
+<ion-header no-border>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon ios="ios-heart-outline" md="ios-heart-outline"></ion-icon>
+      </button>
+      <button ion-button icon-only>
+        <ion-icon ios="md-share" md="md-share"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid no-padding class="pet">
+    <ion-row class="pet-photos-slider">
+      <ion-buttons end>
+        <button ion-button icon-only class="btn-expand" (click)="openGallery()">
+          <ion-icon ios="md-expand" md="md-expand"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-col class="pet-images">
+        <ion-slides class="image-slider" loop="false" slidesPerView="1" pager="true">
+        <ion-slide *ngFor="let img of gallery">
+          <img src="{{img.url}}" class="thumb-img"/>
+        </ion-slide>
+      </ion-slides>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="infos-container">
+        <h3 class="pet-name">{{pet.name.$t}}</h3>
+        <p class="pet-breed" [innerHTML]="pet.breeds.breed | breedFormat"></p>
+        <p class="pet-specs" [innerHTML]="pet | ageSexSize: [pet.age, pet.sex, pet.size]"></p>
+        <div class="rescue-info">
+          <a href="#">{{pet.shelterId.$t}}</a><br>
+          <span>{{pet.contact.city.$t}}</span>
+          <span>{{pet.contact.state.$t}}</span>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="infos-about">
+        <h3 class="pet-about">ABOUT</h3>
+        <p class="pet-description">{{pet.description.$t}}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-buttons>
+    <button ion-button round outline (click)="sponsorMe()">SPONSOR ME</button>
+    <button ion-button round color="secondary" (click)="askAboutMe()">ASK ABOUT ME</button>
+  </ion-buttons>
+</ion-footer>

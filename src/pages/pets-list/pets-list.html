@@ -1,0 +1,41 @@
+<ion-header no-border>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon ios="md-funnel" md="md-funnel"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid class="pet">
+    <ion-row class="pet-box" *ngFor="let pet of pets.pet" (click)="petDetails(pet)">
+      <ion-col class="pet-image">
+        <div class="image-bg"
+          [style.background-image]="'url(' + (pet.media.photos.photo | thumbPhoto) + ')' | safeStyle">
+        </div>
+      </ion-col>
+      <ion-col class="infos-container">
+        <p class="pet-name">{{pet.name.$t}}</p>
+        <p class="pet-breed" [innerHTML]="pet.breeds.breed | breedFormat"></p>
+        <p class="pet-specs" [innerHTML]="pet | ageSexSize: [pet.age, pet.sex, pet.size]"></p>
+        <div class="rescue-info">
+          <a href="#">{{pet.shelterId.$t}}</a><br>
+          <span>{{pet.contact.city.$t}}</span>
+          <span>{{pet.contact.state.$t}}</span>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content
+      loadingText="Loading more pets">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

@@ -1,0 +1,113 @@
+page-home {
+  font-family: 'Montserrat', sans-serif;
+
+  #custom-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000000;
+    width: 100%;
+    background-color: #fff;
+
+    .flb {
+      background-color: #fff;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .aligner-item {
+        max-width: 50%;
+      }
+
+      .aligner-item--top {
+        align-self: flex-start;
+      }
+
+      .aligner-item--bottom {
+        align-self: flex-end;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  svg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+  }
+
+  .scroll-content {
+    z-index: 10;
+    background: url('../assets/images/circle-top.svg') no-repeat;
+    background-position: top center;
+    background-size: 101%;
+    overflow-y: hidden;
+    display: flex;
+  }
+
+  svg#menu-bg {
+    position: absolute;
+    top: 0;
+  }
+
+  .circle-top {
+    margin-top: -1px;
+    width: 101%;
+    position: absolute;
+  }
+
+  .services {
+
+    .find-pet-text {
+      text-align: center;
+      margin-bottom: 1em;
+
+      p {
+        color: #ffffff;
+        font-size: 2.2rem;
+        font-weight: 100;
+        margin: 0;
+      }
+    }
+
+    .services-rows {
+      justify-content: space-around;
+      padding: 0 5px;
+      text-align: center;
+      flex: 1;
+
+      .services-box {
+        display: flex;
+        background-color: #efeef1;
+        border-radius: 27px;
+        margin: 0 auto;
+        width: 14rem;
+        height: 14rem;
+        padding: 10%;
+        text-align: center;
+
+        img {
+          max-width: 8rem;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+
+      .pet-name {
+        font-size: 1em;
+        line-height: 2em;
+      }
+    }
+  }
+}

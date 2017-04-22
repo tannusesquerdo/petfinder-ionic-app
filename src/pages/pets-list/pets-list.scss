@@ -1,0 +1,110 @@
+.ios, .md {
+  page-pets-list {
+    font-family: 'Montserrat', sans-serif;
+
+    .content {
+      background-color: #EFEEF1;
+    }
+
+    svg {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 99;
+    }
+
+    .scroll-content {
+      z-index: 10;
+      background: url('../assets/images/circle-top.svg') no-repeat;
+      background-position: top center;
+      background-size: 101%;
+    }
+
+    svg#menu-bg {
+      position: absolute;
+      top: 0;
+    }
+
+    .circle-top {
+      margin-top: -1px;
+      width: 100%;
+      position: absolute;
+    }
+
+    .pet {
+      &-box {
+        background: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16);
+        margin-bottom: 16px;
+        overflow: hidden;
+
+        .pet-image {
+          max-width: 37%;
+          height: 20vh;
+          margin-bottom: 5px;
+          overflow: hidden;
+
+
+          .image-bg {
+            background-position: center center;
+            background-size: cover;
+            height: 20vh;
+          }
+        }
+      }
+
+      .infos-container {
+        max-width: 63%;
+        position: relative;
+
+        .pet-name {
+          font-size: 2.2rem;
+          color: color($colors, primary);
+          font-weight: 700;
+          margin: 0;
+          overflow: hidden;
+          text-transform: uppercase;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .pet-breed {
+          font-size: 1.4rem;
+          color: #999999;
+          margin: 0;
+          margin-top: 3px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .pet-specs {
+          color: #999999;
+          font-size: 1.55rem;
+          font-weight: 700;
+          margin: 0;
+          margin-top: 3px;
+        }
+
+        .rescue-info {
+          bottom: 5px;
+          color: #999999;
+          font-size: 1.6rem;
+          position: absolute;
+
+          span {
+            margin-top: 3px;
+          }
+
+          a {
+            color: #7332D6;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
