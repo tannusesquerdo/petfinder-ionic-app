@@ -4,7 +4,7 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class Petfinder {
-  private URL: string = 'http://api.petfinder.com/';
+  private URL: string = 'https://api.petfinder.com/';
   private KEY: string = 'ffe1edab016b1e88806a2872dd5e1404';
   pets : any;
   offset: any;
