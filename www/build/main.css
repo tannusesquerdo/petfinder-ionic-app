@@ -24324,6 +24324,141 @@ ion-navbar.toolbar {
   line-height: 44px;
 }
 
+.ios page-favorite-list, .md page-favorite-list {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.ios page-favorite-list .content, .md page-favorite-list .content {
+  background-color: #EFEEF1;
+}
+
+.ios page-favorite-list svg, .md page-favorite-list svg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.ios page-favorite-list .scroll-content, .md page-favorite-list .scroll-content {
+  z-index: 10;
+  background: url("../assets/images/circle-top.svg") no-repeat;
+  background-position: top center;
+  background-size: 101%;
+}
+
+.ios page-favorite-list svg#menu-bg, .md page-favorite-list svg#menu-bg {
+  position: absolute;
+  top: 0;
+}
+
+.ios page-favorite-list .circle-top, .md page-favorite-list .circle-top {
+  margin-top: -1px;
+  width: 100%;
+  position: absolute;
+}
+
+.ios page-favorite-list .pet .favorites-pet-text, .md page-favorite-list .pet .favorites-pet-text {
+  text-align: center;
+  margin-bottom: 1em;
+  padding: 0;
+}
+
+.ios page-favorite-list .pet .favorites-pet-text p, .md page-favorite-list .pet .favorites-pet-text p {
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: 100;
+  margin: 0;
+}
+
+.ios page-favorite-list .pet .not-yet-favorites, .md page-favorite-list .pet .not-yet-favorites {
+  text-align: center;
+  padding: 0;
+  margin-top: 20rem;
+}
+
+.ios page-favorite-list .pet .not-yet-favorites p, .md page-favorite-list .pet .not-yet-favorites p {
+  color: #6504B5;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.ios page-favorite-list .pet-box, .md page-favorite-list .pet-box {
+  background: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16);
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.ios page-favorite-list .pet-box .pet-image, .md page-favorite-list .pet-box .pet-image {
+  max-width: 37%;
+  height: 20vh;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+
+.ios page-favorite-list .pet-box .pet-image .image-bg, .md page-favorite-list .pet-box .pet-image .image-bg {
+  background-position: center center;
+  background-size: cover;
+  height: 20vh;
+}
+
+.ios page-favorite-list .pet .infos-container, .md page-favorite-list .pet .infos-container {
+  max-width: 63%;
+  position: relative;
+}
+
+.ios page-favorite-list .pet .infos-container .pet-name, .md page-favorite-list .pet .infos-container .pet-name {
+  font-size: 2.2rem;
+  color: #6504B5;
+  font-weight: 700;
+  margin: 0;
+  overflow: hidden;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ios page-favorite-list .pet .infos-container .pet-breed, .md page-favorite-list .pet .infos-container .pet-breed {
+  font-size: 1.4rem;
+  color: #999999;
+  margin: 0;
+  margin-top: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ios page-favorite-list .pet .infos-container .pet-specs, .md page-favorite-list .pet .infos-container .pet-specs {
+  color: #999999;
+  font-size: 1.55rem;
+  font-weight: 700;
+  margin: 0;
+  margin-top: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ios page-favorite-list .pet .infos-container .rescue-info, .md page-favorite-list .pet .infos-container .rescue-info {
+  bottom: 5px;
+  color: #999999;
+  font-size: 1.6rem;
+  position: absolute;
+}
+
+.ios page-favorite-list .pet .infos-container .rescue-info span, .md page-favorite-list .pet .infos-container .rescue-info span {
+  margin-top: 3px;
+}
+
+.ios page-favorite-list .pet .infos-container .rescue-info a, .md page-favorite-list .pet .infos-container .rescue-info a {
+  color: #7332D6;
+  text-decoration: none;
+}
+
 page-home {
   font-family: 'Montserrat', sans-serif;
 }

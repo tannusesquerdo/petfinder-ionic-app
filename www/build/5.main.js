@@ -1,14 +1,14 @@
 webpackJsonp([5],{
 
-/***/ 314:
+/***/ 328:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modal_ask_about_pet__ = __webpack_require__(244);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ModalAskAboutPetModule", function() { return ModalAskAboutPetModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(253);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeModule", function() { return HomeModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,26 +18,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ModalAskAboutPetModule = (function () {
-    function ModalAskAboutPetModule() {
+var HomeModule = (function () {
+    function HomeModule() {
     }
-    return ModalAskAboutPetModule;
+    return HomeModule;
 }());
-ModalAskAboutPetModule = __decorate([
+HomeModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__modal_ask_about_pet__["a" /* ModalAskAboutPet */],
+            __WEBPACK_IMPORTED_MODULE_2__home__["a" /* Home */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__modal_ask_about_pet__["a" /* ModalAskAboutPet */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__home__["a" /* Home */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__modal_ask_about_pet__["a" /* ModalAskAboutPet */]
+            __WEBPACK_IMPORTED_MODULE_2__home__["a" /* Home */]
         ]
     })
-], ModalAskAboutPetModule);
+], HomeModule);
 
-//# sourceMappingURL=modal-ask-about-pet.module.js.map
+//# sourceMappingURL=home.module.js.map
 
 /***/ })
 

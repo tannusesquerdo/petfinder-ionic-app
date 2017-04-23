@@ -5,8 +5,8 @@
     </button>
     <ion-title>Home</ion-title>
     <ion-buttons end>
-      <button ion-button icon-only>
-        <ion-icon ios="ios-heart-outline" md="ios-heart-outline"></ion-icon>
+      <button ion-button icon-only (click)="addFavorite(pet)">
+        <ion-icon [name]="favoriteIcon ? 'md-heart' : 'md-heart-outline'"></ion-icon>
       </button>
       <button ion-button icon-only>
         <ion-icon ios="md-share" md="md-share"></ion-icon>
