@@ -24565,22 +24565,18 @@ page-home .services .services-rows {
 }
 
 page-home .services .services-rows .services-box {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   background-color: #efeef1;
   border-radius: 27px;
   margin: 0 auto;
-  width: 14rem;
-  height: 14rem;
+  width: 80%;
   padding: 10%;
   text-align: center;
 }
 
 page-home .services .services-rows .services-box img {
-  max-width: 8rem;
+  max-width: 90%;
   display: block;
-  margin: 0 auto;
+  margin: 5px auto;
 }
 
 page-home .services .services-rows .pet-name {
