@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ViewController, IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -7,12 +7,32 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'pet-filter.html',
 })
 export class PetFilter {
+  pet: string = "dog";
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public viewCtrl: ViewController
+  ) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PetFilter');
+  }
+
+  selectedDog() {
+    this.pet = 'dog';
+  }
+
+  selectedCat() {
+    this.pet = 'cat';
+  }
+
+  selectedOther() {
+    this.pet = 'other';
+  }
+
+  dismiss() {
+    this.viewCtrl.dismiss();
   }
 
 }

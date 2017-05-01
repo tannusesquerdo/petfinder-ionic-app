@@ -1,7 +1,7 @@
-<!--<ion-header no-border>
+<ion-header no-border>
   <ion-toolbar color="primary">
     <ion-title>
-      Filter
+      Filters
     </ion-title>
     <ion-buttons start>
       <button ion-button (click)="dismiss()">
@@ -10,9 +10,42 @@
       </button>
     </ion-buttons>
   </ion-toolbar>
-</ion-header>-->
+</ion-header>
 
 
 <ion-content padding>
+  <ion-segment [(ngModel)]="pet" color="primary">
+    <ion-segment-button value="dog" (ionSelect)="selectedDog()">
+      Dog
+    </ion-segment-button>
+    <ion-segment-button value="cat" (ionSelect)="selectedCat()">
+      Cat
+    </ion-segment-button>
+    <ion-segment-button value="other" (ionSelect)="selectedOther()">
+      Other
+    </ion-segment-button>
+  </ion-segment>
 
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'dog'">
+      <ion-list-header>
+        Location
+      </ion-list-header>
+      <ion-item>
+        <ion-thumbnail item-left>
+          <img src="assets/img/thumbnail-kitten-1.jpg">
+        </ion-thumbnail>
+        <h2>Luna</h2>
+      </ion-item>
+      <ion-list-header>
+        Breed
+      </ion-list-header>
+      <ion-item>
+        <ion-thumbnail item-left>
+          <img src="assets/img/thumbnail-kitten-1.jpg">
+        </ion-thumbnail>
+        <h2>Luna</h2>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>
