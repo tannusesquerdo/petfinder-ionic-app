@@ -26,3 +26,35 @@
     line-height: 44px;
   }
 }
+
+@media screen and (min-width: 768px) {
+    .only-mobile {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      background: #fff;
+      height: 100%;
+      width: 100%;
+      z-index: 10;
+      display: flex;
+
+      .content {
+        max-width: 350px;
+        text-align: center;
+        align-self: center;
+        margin: 0 auto;
+
+        img {
+          width: 120px;
+          height: 120px;
+        }
+
+        p {
+          font-size: 23px;
+        }
+      }
+
+
+    }
+}

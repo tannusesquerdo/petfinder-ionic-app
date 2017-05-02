@@ -1,14 +1,14 @@
 webpackJsonp([1],{
 
-/***/ 322:
+/***/ 287:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pet_details__ = __webpack_require__(332);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_pipes_module__ = __webpack_require__(327);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pet_details__ = __webpack_require__(290);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_pipes_module__ = __webpack_require__(205);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PetDetailsModule", function() { return PetDetailsModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -44,17 +44,17 @@ PetDetailsModule = __decorate([
 
 /***/ }),
 
-/***/ 332:
+/***/ 290:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_gallery_modal__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_gallery_modal__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_gallery_modal___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ionic_gallery_modal__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modal_sponsor_pet_modal_sponsor_pet__ = __webpack_require__(245);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__modal_ask_about_pet_modal_ask_about_pet__ = __webpack_require__(244);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_user_data__ = __webpack_require__(248);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modal_sponsor_pet_modal_sponsor_pet__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__modal_ask_about_pet_modal_ask_about_pet__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_user_data__ = __webpack_require__(100);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PetDetails; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -127,7 +127,7 @@ var PetDetails = (function () {
             this.user.addFavorite(pet);
             this.favoriteIcon = true;
             // create an alert instance
-            var alert = this.alertCtrl.create({
+            var alert_1 = this.alertCtrl.create({
                 title: 'Favorite Added',
                 buttons: [{
                         text: 'OK',
@@ -138,7 +138,7 @@ var PetDetails = (function () {
                     }]
             });
             // now present the alert on top of all other content
-            alert.present();
+            alert_1.present();
         }
     };
     PetDetails.prototype.removeFavorite = function (pet, title) {
@@ -176,10 +176,13 @@ PetDetails = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'page-pet-details',template:/*ion-inline-start:"/Volumes/Dados/Aulas/petfinder/petfinder-ionic-app/src/pages/pet-details/pet-details.html"*/'<ion-header no-border>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="addFavorite(pet)">\n        <ion-icon [name]="favoriteIcon ? \'md-heart\' : \'md-heart-outline\'"></ion-icon>\n      </button>\n      <button ion-button icon-only>\n        <ion-icon ios="md-share" md="md-share"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <ion-grid no-padding class="pet">\n    <ion-row class="pet-photos-slider">\n      <ion-buttons end>\n        <button ion-button icon-only class="btn-expand" (click)="openGallery()">\n          <ion-icon ios="md-expand" md="md-expand"></ion-icon>\n        </button>\n      </ion-buttons>\n      <ion-col class="pet-images">\n        <ion-slides class="image-slider" loop="false" slidesPerView="1" pager="true">\n        <ion-slide *ngFor="let img of gallery">\n          <img src="{{img.url}}" class="thumb-img"/>\n        </ion-slide>\n      </ion-slides>\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col class="infos-container">\n        <h3 class="pet-name">{{pet.name.$t}}</h3>\n        <p class="pet-breed" [innerHTML]="pet.breeds.breed | breedFormat"></p>\n        <p class="pet-specs" [innerHTML]="pet | ageSexSize: [pet.age, pet.sex, pet.size]"></p>\n        <div class="rescue-info">\n          <a href="#">{{pet.shelterId.$t}}</a><br>\n          <span>{{pet.contact.city.$t}}</span>\n          <span>{{pet.contact.state.$t}}</span>\n        </div>\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col class="infos-about">\n        <h3 class="pet-about">ABOUT</h3>\n        <p class="pet-description">{{pet.description.$t}}</p>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>\n\n<ion-footer>\n  <ion-buttons>\n    <button ion-button round outline (click)="sponsorMe()">SPONSOR ME</button>\n    <button ion-button round color="secondary" (click)="askAboutMe()">ASK ABOUT ME</button>\n  </ion-buttons>\n</ion-footer>\n'/*ion-inline-end:"/Volumes/Dados/Aulas/petfinder/petfinder-ionic-app/src/pages/pet-details/pet-details.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["AlertController"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["AlertController"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["ModalController"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["ModalController"]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__providers_user_data__["a" /* UserData */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__providers_user_data__["a" /* UserData */]) === "function" && _e || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["AlertController"],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["ModalController"],
+        __WEBPACK_IMPORTED_MODULE_5__providers_user_data__["a" /* UserData */]])
 ], PetDetails);
 
-var _a, _b, _c, _d, _e;
 //# sourceMappingURL=pet-details.js.map
 
 /***/ })
